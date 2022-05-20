@@ -1,20 +1,20 @@
 USE Northwind
 
---ex1 количество записей в базе sysobjects?
+--ex1 РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ Р±Р°Р·Рµ sysobjects?
 /*SELECT count(*)
 FROM sysobjects*/
 
---ex2 количество объектов с типом U?
+--ex2 РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ СЃ С‚РёРїРѕРј U?
 /*SELECT count(*)
 FROM sysobjects
 WHERE type='U'*/
 
---ex3 количество объектов, относящихся к объектам с типом U?
+--ex3 РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ, РѕС‚РЅРѕСЃСЏС‰РёС…СЃСЏ Рє РѕР±СЉРµРєС‚Р°Рј СЃ С‚РёРїРѕРј U?
 /*SELECT count(*)
 FROM sysobjects sys1, sysobjects sys2
 WHERE sys2.id = sys1.parent_obj and sys2.xtype='U'*/
 
---ex4 количество объектов, не относящися к типу U и не являющихся объектами с типом U?
+--ex4 РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ, РЅРµ РѕС‚РЅРѕСЃСЏС‰РёСЃСЏ Рє С‚РёРїСѓ U Рё РЅРµ СЏРІР»СЏСЋС‰РёС…СЃСЏ РѕР±СЉРµРєС‚Р°РјРё СЃ С‚РёРїРѕРј U?
 /*SELECT count(*)
 FROM sysobjects sys1
 WHERE sys1.type != 'U' and NOT EXISTS
@@ -22,7 +22,7 @@ WHERE sys1.type != 'U' and NOT EXISTS
 	FROM sysobjects sys2
 	WHERE sys2.id = sys1.parent_obj and sys2.type='U')*/
 
---ex5 Количество типов? Количество объектов каждого типа?
+--ex5 РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РёРїРѕРІ? РљРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ РєР°Р¶РґРѕРіРѕ С‚РёРїР°?
 --SELECT count(distinct(type)) FROM sysobjects
 
 /*SELECT distinct type, count(type)
@@ -30,8 +30,8 @@ FROM sysobjects
 GROUP BY type*/
 
 
---ex6 количество объектов каждого типа, не относящися к типу U 
---и не являющихся объектами с типом U? 
+--ex6 РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ РєР°Р¶РґРѕРіРѕ С‚РёРїР°, РЅРµ РѕС‚РЅРѕСЃСЏС‰РёСЃСЏ Рє С‚РёРїСѓ U 
+--Рё РЅРµ СЏРІР»СЏСЋС‰РёС…СЃСЏ РѕР±СЉРµРєС‚Р°РјРё СЃ С‚РёРїРѕРј U? 
 /*SELECT type, count(type)
 FROM sysobjects sys1
 WHERE type != 'U' and NOT EXISTS
@@ -40,7 +40,7 @@ WHERE type != 'U' and NOT EXISTS
 	WHERE sys2.id = sys1.parent_obj and sys2.type='U')
 GROUP BY type*/
 
---ex7 количество объектов, чье имя начинается с символов sys?
+--ex7 РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±СЉРµРєС‚РѕРІ, С‡СЊРµ РёРјСЏ РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ СЃРёРјРІРѕР»РѕРІ sys?
 /*SELECT count (*)
 FROM sysobjects
 WHERE name LIKE 'sys%'*/

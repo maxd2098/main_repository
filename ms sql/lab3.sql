@@ -1,7 +1,7 @@
 USE Northwind
 
---1 переписать запросы 3, 4, 5 из ЛР 2 используя оператор JOIN
-/*SELECT CategoryName as 'Имя категории', avg(prod.UnitPrice) as 'Средняя цена за ед.'
+--1 РїРµСЂРµРїРёСЃР°С‚СЊ Р·Р°РїСЂРѕСЃС‹ 3, 4, 5 РёР· Р›Р  2 РёСЃРїРѕР»СЊР·СѓСЏ РѕРїРµСЂР°С‚РѕСЂ JOIN
+/*SELECT CategoryName as 'РРјСЏ РєР°С‚РµРіРѕСЂРёРё', avg(prod.UnitPrice) as 'РЎСЂРµРґРЅСЏСЏ С†РµРЅР° Р·Р° РµРґ.'
 FROM categories cat JOIN products prod ON cat.categoryid=prod.categoryid
 GROUP BY cat.categoryname*/
 
@@ -19,18 +19,18 @@ FROM (SELECT categoryid, avg(unitprice) as aver FROM products GROUP BY categoryi
 GROUP BY c.categoryname
 ORDER BY average*/
 
---2 посчитать обороты по покупателям, использовать оператор JOIN
+--2 РїРѕСЃС‡РёС‚Р°С‚СЊ РѕР±РѕСЂРѕС‚С‹ РїРѕ РїРѕРєСѓРїР°С‚РµР»СЏРј, РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕРїРµСЂР°С‚РѕСЂ JOIN
 /*SELECT customerid, sum((unitprice-discount)*quantity) as turnover
 FROM orders o JOIN "Order Details" d ON o.orderid=d.orderid
 GROUP BY customerid*/
 
---3 Вывести 10 покупателей с максимальными оборотами
+--3 Р’С‹РІРµСЃС‚Рё 10 РїРѕРєСѓРїР°С‚РµР»РµР№ СЃ РјР°РєСЃРёРјР°Р»СЊРЅС‹РјРё РѕР±РѕСЂРѕС‚Р°РјРё
 /*SELECT TOP 10 customerid, sum((unitprice-discount)*quantity) as turnover
 FROM orders o JOIN "Order Details" d ON o.orderid=d.orderid
 GROUP BY customerid
 ORDER BY turnover DESC*/
 
---4 Найти покупателей с оборотами выше средних
+--4 РќР°Р№С‚Рё РїРѕРєСѓРїР°С‚РµР»РµР№ СЃ РѕР±РѕСЂРѕС‚Р°РјРё РІС‹С€Рµ СЃСЂРµРґРЅРёС…
 /*SELECT customerid, sum((unitprice-discount)*quantity) as turnover
 FROM orders o JOIN "Order Details" d ON o.orderid=d.orderid
 GROUP BY customerid

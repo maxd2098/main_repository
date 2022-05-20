@@ -1,23 +1,23 @@
 USE Northwind
 
---1 сколько имеется категорий товаров с таблицу Categories?
+--1 СЃРєРѕР»СЊРєРѕ РёРјРµРµС‚СЃСЏ РєР°С‚РµРіРѕСЂРёР№ С‚РѕРІР°СЂРѕРІ СЃ С‚Р°Р±Р»РёС†Сѓ Categories?
 /*SELECT COUNT(DISTINCT CategoryName)
 FROM Categories*/
 
---2 сколько видов товаров в каждой категории?
+--2 СЃРєРѕР»СЊРєРѕ РІРёРґРѕРІ С‚РѕРІР°СЂРѕРІ РІ РєР°Р¶РґРѕР№ РєР°С‚РµРіРѕСЂРёРё?
 /*SELECT CategoryName, count(*) AS Count
 FROM Categories cat, Products prod
 WHERE cat.CategoryID=prod.CategoryID
 GROUP BY cat.CategoryName*/
 
---3 вычислите среднюю стоимость единицы продукции по каждой категории
-/*SELECT CategoryName as 'Имя категории', avg(prod.UnitPrice) as 'Средняя цена за ед.'
+--3 РІС‹С‡РёСЃР»РёС‚Рµ СЃСЂРµРґРЅСЋСЋ СЃС‚РѕРёРјРѕСЃС‚СЊ РµРґРёРЅРёС†С‹ РїСЂРѕРґСѓРєС†РёРё РїРѕ РєР°Р¶РґРѕР№ РєР°С‚РµРіРѕСЂРёРё
+/*SELECT CategoryName as 'РРјСЏ РєР°С‚РµРіРѕСЂРёРё', avg(prod.UnitPrice) as 'РЎСЂРµРґРЅСЏСЏ С†РµРЅР° Р·Р° РµРґ.'
 FROM categories cat, products prod
 WHERE cat.CategoryID=prod.CategoryID
 GROUP BY cat.categoryname*/
 
---4 сколько имеется товаров, чья стоимость единицы продукции превышает среднюю стоимость
---единицы в соответствующей группе?
+--4 СЃРєРѕР»СЊРєРѕ РёРјРµРµС‚СЃСЏ С‚РѕРІР°СЂРѕРІ, С‡СЊСЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РµРґРёРЅРёС†С‹ РїСЂРѕРґСѓРєС†РёРё РїСЂРµРІС‹С€Р°РµС‚ СЃСЂРµРґРЅСЋСЋ СЃС‚РѕРёРјРѕСЃС‚СЊ
+--РµРґРёРЅРёС†С‹ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµР№ РіСЂСѓРїРїРµ?
 /*SELECT count(unitprice) as average
 FROM products p1
 WHERE unitprice >
@@ -26,7 +26,7 @@ WHERE unitprice >
 	GROUP BY categoryid
 	HAVING p1.categoryid=p2.categoryid)*/
 
---5 вычислите П.4 для каждой категории товаров, отсортируйте результат по количеству
+--5 РІС‹С‡РёСЃР»РёС‚Рµ Рџ.4 РґР»СЏ РєР°Р¶РґРѕР№ РєР°С‚РµРіРѕСЂРёРё С‚РѕРІР°СЂРѕРІ, РѕС‚СЃРѕСЂС‚РёСЂСѓР№С‚Рµ СЂРµР·СѓР»СЊС‚Р°С‚ РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ
 /*SELECT categoryname, count(unitprice) as average
 FROM categories cat, products p1
 WHERE p1.categoryid = cat.categoryid and p1.unitprice >
@@ -36,12 +36,12 @@ WHERE p1.categoryid = cat.categoryid and p1.unitprice >
 GROUP BY categoryname
 ORDER BY average*/
 
---6 в скольких странах располагаются поставщики товаров?
+--6 РІ СЃРєРѕР»СЊРєРёС… СЃС‚СЂР°РЅР°С… СЂР°СЃРїРѕР»Р°РіР°СЋС‚СЃСЏ РїРѕСЃС‚Р°РІС‰РёРєРё С‚РѕРІР°СЂРѕРІ?
 /*SELECT count(distinct country)
 FROM suppliers*/
 
---7 сколько наименований товаров поступает из каждой страны? отсортируйте результат по
---убыванию количества товаров
+--7 СЃРєРѕР»СЊРєРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёР№ С‚РѕРІР°СЂРѕРІ РїРѕСЃС‚СѓРїР°РµС‚ РёР· РєР°Р¶РґРѕР№ СЃС‚СЂР°РЅС‹? РѕС‚СЃРѕСЂС‚РёСЂСѓР№С‚Рµ СЂРµР·СѓР»СЊС‚Р°С‚ РїРѕ
+--СѓР±С‹РІР°РЅРёСЋ РєРѕР»РёС‡РµСЃС‚РІР° С‚РѕРІР°СЂРѕРІ
 /*SELECT Country, count(productname) as count_PN
 FROM suppliers s, products p
 WHERE p.supplierid=s.supplierid
