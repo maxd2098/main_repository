@@ -1,0 +1,251 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.fon {
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.cap {
+	width: 100%;
+	position: sticky;
+    top: 0;
+	background: #007765;
+}
+
+.two {
+	padding-top: 160px;
+	padding-bottom: 160px;
+	background-image: url("2.png");
+}
+
+.three {
+	padding-top: 48px;
+	padding-bottom: 92px;
+	background: #EEEEEE;
+}
+
+.four {
+	padding-top: 128px;
+	padding-bottom: 128px;
+	background-image: url("4.png");
+}
+
+.five {
+	padding-top: 48px;
+	padding-bottom: 92px;
+	background: #FFFFFF;
+}
+
+.six {
+	padding-top: 48px;
+	padding-bottom: 94px;
+	background: #EEEEEE;
+}
+
+.seven {
+	padding-top: 48px;
+	padding-bottom: 64px;
+
+	background: #333333;
+}
+
+.container {
+	width: 100%;
+	box-sizing: border-box;
+	max-width: 1259px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 55px;
+	padding-right: 55px;
+}
+
+#text_two {
+	font-family: Roboto, sans-serif;
+	color: white;
+	text-align: center;
+	font-weight: 500;
+	font-size: 72px;
+	line-height: 84px;
+}
+
+#three_h1 {
+	font-family: Roboto, sans-serif;
+	color: #007765;
+	text-align: center;
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 75px;
+}
+
+.text_three {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 38px;
+}
+
+.text_four {
+	font-family: Roboto, sans-serif;
+	font-style: italic;
+	color: white;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 56px;
+	text-align: center;
+}
+
+#five_h1 {
+	font-family: Roboto, sans-serif;
+	color: #007765;
+	text-align: center;
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 75px;
+}
+
+.row {
+	margin-top: 16px;
+}
+
+.row > img {
+	float: left;
+	margin-right: 48px;
+}
+
+.five_1 {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 38px;
+}
+
+.five_2 {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 38px;
+	padding-top: 35px;
+}
+
+#six_h1 {
+	font-family: Roboto, sans-serif;
+	color: #007765;
+	text-align: center;
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 75px;
+}
+
+
+
+.figure_team {
+	margin: 0;
+	padding-bottom: 32px;
+}
+
+.six_team {
+	width: 350px;
+	height: 283px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 55px;
+	display: inline-block;
+
+}
+
+.six_team img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 168px;
+}
+
+.six_name {
+	font-family: Roboto, sans-serif;
+	color: #007765;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+}
+
+.six_text {
+	font-family: Roboto, sans-serif;
+	font-style: italic;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+}
+
+
+
+.seven_text {
+	font-family: Roboto, sans-serif;
+	color: white;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	height: 64px;
+	width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.row_cap > a {
+	float: left;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.row_cap > nav {
+	float: right;
+	padding-top: 29px;
+	padding-bottom: 26px;
+
+}
+
+.cap > .container:after {
+	content: "";
+  	display: table;
+  	clear: both;
+}
+
+.active {
+  	
+}
+
+
+
+
+.active li {
+	list-style: none;
+	display: inline-block;
+}
+
+.active li a {
+	color: white;
+	text-decoration: none;
+}
+
+.active ul {
+	color: white;
+	padding: 0;
+	margin: 0;
+	font-family: Roboto, sans-serif;
+	font-size: 24px;
+
+}
+
+#text_two, #three_h1, #five_h1, #six_h1 {
+	border-top: 84px solid transparent;
+    margin-top: -84px;
+    background-clip: padding-box;
+}
