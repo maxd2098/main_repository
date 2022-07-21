@@ -1,0 +1,326 @@
+body {
+	margin: 0;
+	font-family: 'Gilroy-Bold', sans-serif;
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.container {
+	width: 944px;
+	margin: auto;
+
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.photo-man {
+	width: 100%;
+	height: 387px;
+	background-image: url("images/BSPP2266.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-origin: border-box;
+	margin-bottom: 104px;
+}
+
+.row-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu {
+	padding: 32px 0;
+	border-bottom: 1px solid #828282;
+}
+
+a {
+	text-decoration: none;
+	color: #828282;
+}
+
+.reference a:hover, .reference a:active {
+	color: black;
+}
+
+.info {
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.name {
+	font-size: 47px;
+	line-height: 59px;
+}
+
+.information .describe {
+	display: flex;
+	align-items: flex-end;
+	padding-right: 60px;
+	padding-bottom: 10px;
+}
+
+.language {
+	font-size: 16px;
+	writing-mode: vertical-rl;
+	transform: rotate(-180deg);
+	transform-origin: center;
+	padding-top: 10px;
+
+}
+
+.photo img {
+	padding-bottom: 104px;
+}
+
+.about-me {
+	background-color: #F6F6F6;
+}
+
+.about-me .title {
+	padding-top: 120px;
+}
+
+.about-me .block {
+	width: 485px;
+	margin: auto;
+	padding-top: 18px;
+	padding-bottom: 107px;
+}
+
+.about-me .text {
+	text-align: center;
+}
+
+.title {
+	text-align: center;
+	font-size: 34px;
+	line-height: 42px;
+	
+}
+
+.skills .title {
+	padding-top: 91px;
+}
+
+.skills .text {
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 83.5px;
+}
+
+.cards {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 111px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 166px;
+	height: 206px;
+	text-align: center;
+}
+
+.skills .describe {
+	padding-top: 23px;
+	font-size: 14px;
+	line-height: 17px;
+	color: #828282;
+}
+
+.estimate {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card:hover {
+	background-color: whitesmoke;
+}
+
+.portfolio {
+	padding-top: 113px;
+	background-color: #F6F6F6;
+}
+
+.portfolio .block {
+	margin-top: 47px;
+}
+
+.big-card {
+	padding-bottom: 100px;
+}
+
+.big-card img {
+	width: 100%;
+	margin-bottom: 45px;
+}
+
+.big-card .text {
+	text-decoration: underline;
+	text-align: center;
+}
+
+.big-card a {
+	color: black;
+}
+
+.contacts .title {
+	padding-top: 114px;
+}
+
+.contacts .block {
+	margin: auto;
+	width: 342px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 123px;
+}
+
+.contacts .references {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 45px;
+}
+
+.references img {
+	width: 40px;
+}
+
+.contacts-text-one {
+	margin-bottom: 30px;
+}
+
+.contacts-text-two {
+	margin: auto;
+	width: 180px;
+	margin-bottom: 86px;
+	background-color: black;
+	padding-top: 13px;
+	padding-bottom: 12px;
+	border-radius: 30px;
+
+}
+
+.contacts-text-two a {
+	color: white;
+}
+
+.contacts-text-three {
+	font-size: 14px;
+	line-height: 17px;
+	color: #828282;
+}
+
+@media screen and (max-width: 992px) {
+	.container {
+		width: 768px;
+		margin: auto;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 576px;
+		margin: auto;
+	}
+	.photo-man {
+		height: 478;
+		background-image: url("images/BSPP2266.svg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-origin: border-box;
+		margin-bottom: 84px;
+	}
+
+	.cards {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 100px;
+	}
+
+	.card {
+		flex-basis: 34%;
+		margin-bottom: 82px;
+	}
+
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 368px;
+		margin: auto;
+	}
+
+	.about-me .block {
+		width: 316px;
+	}
+
+	.about-me .title {
+		padding-top: 81px;
+	}
+
+	.information .row-flex {
+		display: block;
+		justify-content: space-between;
+	}
+
+	.cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 100px;
+	}
+
+	.card {
+		flex-basis: auto;
+		margin-bottom: 82px;
+	}
+
+	.contacts .title {
+		padding-top: 82px;
+	}
+
+	.contacts .block {
+		width: 315px;
+		padding-bottom: 90px;
+	}
+
+	.contacts-text-one {
+		margin-bottom: 40px;
+	}
+
+
+	.contacts-text-two {
+		margin: auto;
+		width: 100%;
+		margin-bottom: 48px;
+		background-color: black;
+		padding-top: 13px;
+		padding-bottom: 12px;
+		border-radius: 30px;
+
+	}
+
+	.contacts .references {
+		margin-bottom: 48px;
+	}
+
+	.contacts-text-three {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+}
